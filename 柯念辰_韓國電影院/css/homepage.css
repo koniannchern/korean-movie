@@ -1,0 +1,652 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --lightwhite: #f8f1f1;
+    --darkblue: #222831;
+}
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/movie-theater.jpg); 
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+}
+
+/*首頁navbar*/
+.homepage-navbar{
+    background-color: rgb(3, 3, 5, 0.7);
+    margin-bottom: 40px;
+    padding: 25px 0;
+}
+.navbar-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+}
+.navbar-box h1{
+    color: var(--lightwhite);
+    font-family: 'Roboto Slab', serif;
+    margin-left: 20px;
+}
+.homepage-navbar ul{
+    list-style: none;
+    color:  var(--lightwhite);
+    display: flex;
+}
+.homepage-navbar ul li{
+    margin: 0 20px
+}
+.homepage-navbar ul li a{
+    text-decoration: none;
+    color:  var(--lightwhite);
+    font-size: 22px;
+    display: inline-block;
+    padding: 10px;
+    border-bottom: 3px solid transparent;
+}
+.homepage-navbar ul li a:hover{
+    border-bottom: 3px solid  var(--lightwhite);
+}
+.showmenu{
+    display:none;
+    font-size: 25px;
+    margin-right: 20px;
+}
+.showmenu i{
+    color: #fff;
+}
+@media(max-width:1200px){
+    .navbar-menu{
+        max-height: 0px;                       
+        overflow: hidden;
+        position: absolute;  
+        z-index: 100;
+        top:62px;
+        left: 0;  
+        right: 0;
+        transition: max-height 1s;
+        background: rgba(0,0,0,0.6)
+    }
+    .navbar-menu ul{
+        display:flex;
+        flex-direction: column;
+    }
+    .showmenu{
+        display:block;
+    }
+    .menu-show .navbar-menu{
+        max-height: 800px;
+    }
+}
+/*電影列表title*/
+.box-office{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.box-office h2{
+    color: var(--lightwhite);
+    padding: 5px;
+    
+}
+/*電影列表輪播效果*/
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      
+    }
+    100% {
+      opacity: 1;
+      
+    }
+  }
+.swiper-container{
+    width: 70%;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.swiper-slide{
+	width: 360px;
+    height: 516px;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.swiper-slide button{
+    background-color: transparent;
+    color: rgb(121, 114, 17);
+    padding: 15px 30px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 3px;   
+}
+.swiper-slide button i{
+    margin: 0px 5px;
+    
+}
+.swiper-slide a{
+    display: block;
+    padding: 15px 30px;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bolder;
+    margin: 0 3px;
+}
+.swiper-slide a:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+    padding: 15px 28px;
+}
+/*票價說明*/
+.ticket-price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--darkblue);
+    color:  var(--lightwhite);
+    padding: 45px 0;
+}
+.ticket-intro{
+    max-width: 1200px;
+}
+.ticket-intro table{
+    width: 100%;
+    border-collapse: collapse;
+} 
+.ticket-price h3{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.ticket-price h3 img{
+    width: 60px;
+    margin: 0 10px;
+}
+.ticket-intro tr, .ticket-intro th, .ticket-intro td{
+    border-bottom: 1px solid var(--lightwhite);
+    font-size: 22px;
+    padding: 10px 60px;
+    text-align: center;
+}
+.discount-ticket{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px;
+}
+.discount-ticket h3{
+    font-size: 22px;
+    margin: 30px 0;
+}
+
+.discount-ticket ul li{
+    line-height: 30px;
+}
+@media(max-width: 1200px){
+    .ticket-intro tr, .ticket-intro th, .ticket-intro td{
+        padding: 10px 20px;
+    }
+}
+/*優惠*/
+.sales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 0;
+    background-color: var(--lightwhite);
+    color: var(--darkblue);
+}
+
+
+.sales h3{
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.sales h3 img{
+    width: 60px;
+    margin: 0 10px;
+}
+.sales-grid{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 250px 250px;
+    grid-gap: 20px;
+}
+.sales-grid>div{
+    border: 1px solid rgba(179, 118, 118, 0.8);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, #C9D6FF , #E2E2E2);
+    box-shadow: 3px 3px 10px black;
+}
+.sales-grid>div span h4{
+    font-size: 20px;
+}
+.sales-grid img{
+    width: 70px;
+    margin: 15px;
+}
+@media(max-width: 1200px){
+    .sales-grid{
+        display: flex;
+        flex-direction: column;
+        padding: 25px 40px;
+    }
+}
+/*電影院內部環境*/
+.theater{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 0;
+    background-color: var(--darkblue);
+}
+.theater-seat-info{
+    margin-bottom: 20px;
+}
+.theater-seat-info h5{
+    font-size: 25px;
+    color:var(--lightwhite);
+    display: flex;
+    align-items: center;
+}
+.theater-seat-info h5 img{
+    width: 60px;
+    margin: 0 10px;
+}
+.theater-seats{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+.theater-seats span{
+    color:  var(--darkblue);
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 300px;
+    margin: 17px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.theater-seats span:nth-of-type(3){
+    margin-left: auto;
+}
+.theater-seats span img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;   
+}
+.theater-seats span .theater-seats-intro{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 2;
+    color: rgb(0, 0, 0);
+    display:none;
+    font-weight: bolder;
+}
+.theater-seats-intro h6{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.theater-seats span:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: block;
+    z-index: 1;
+}
+.theater-seats span:hover:after{
+    background: linear-gradient(to bottom, #ffefba8f,#ffffff0a);
+}
+.theater-seats span:hover .theater-seats-intro{
+    display: block;
+}
+.theater-seats span:hover img{
+    transform: scale(1.2);
+    transition: 1s linear;
+}
+@media(max-width: 1200px){
+    .theater-seats{
+        flex-direction: column;
+        align-items: center;
+    }
+    .theater-seats span:nth-of-type(3){
+        margin: 17px 0;
+    }
+}
+
+/*訂位系統*/
+.booking{
+    background-color: var(--lightwhite);
+    padding: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.booking-box{
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    max-width: 100%;
+}
+
+.system-title h3{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: var(--darkblue);
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.system-title h3 img{
+    width: 60px;
+    margin: 0 10px;
+}
+/*選擇座位*/
+.booking-seats{
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seats-container{
+	perspective: 1000px;
+	margin-bottom: 30px;
+}
+.seat {
+	background-color: #444451;
+	height: 22px;
+	width: 25px;
+	margin: 3px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.seat.selected{
+	background-color: #280dc0;
+}
+.seat.occupied{
+	background-color: rgb(77, 41, 7);
+}
+.seat:nth-of-type(2){
+	margin-right: 18px;
+}
+.seat:nth-last-of-type(2){
+	margin-left: 18px;
+}
+.seat:not(.occupied):hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+.showcase .seat:not(.occupied):hover {
+	cursor: default;
+	transform: scale(1);
+}
+.showcase{
+	background: rgba(0,0,0,0.1);
+	padding: 5px 10px;
+	border-radius: 5px;
+	color: #777;
+	list-style-type: none;
+	display:flex;
+	justify-content: space-between;
+}
+.showcase li{
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	margin: 0 10px;
+}
+.showcase li small{
+	margin-left: 2px;
+}
+.row{
+	display:flex;
+}
+.screen{
+	background-color: rgb(194, 79, 79);
+	height: 70px;
+	width: 100%;
+	margin: 15px 0;
+	transform: rotateX(-45deg);
+	box-shadow: 0 3px 10px rgba(255,255,255,0.7);
+}
+@media(max-width: 1200px){
+    .booking-box{
+        flex-direction: column;
+    }
+}
+/*訂位資訊*/
+.booking-info{
+    margin: 0 50px;
+}
+.booking-info-box{
+    position: relative;
+    display: flex;
+    width: 400px;
+    height: 48px;
+    line-height: 3;
+    background: #494451;
+    overflow:hidden;
+    border-radius: 4px;
+    margin-bottom: 35px;
+    padding-left: 5px;
+}
+.booking-info-box::after{
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 16px;
+    background: rgb(93, 52, 189);
+    cursor: pointer;
+    pointer-events:none;
+    transition: .25s all ease;
+}
+.booking-info-box:hover::after{
+    color: #23b499;
+}
+.booking-info-box label{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: rgb(218, 126, 126);
+}
+.booking-info-box select{
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    background-color: #494451;
+    background-image: none;
+    flex: 1;
+    padding: 0 25px;
+    color: var(--lightwhite);
+    cursor: pointer;
+    font-size: 20px;
+}
+.booking-info-box select option{
+    height: 3em;
+}
+.booking-phone{
+    background-color: #494451;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 48px;
+    line-height: 3;
+    border-radius: 4px;
+    margin-bottom: 35px;
+    padding-left: 5px;
+}
+.booking-phone label{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: rgb(218, 126, 126);
+}
+.booking-phone input{
+    width: 250px;
+    font-size: 20px;
+    outline: none;
+    text-indent: 5px;
+}
+select::-ms-expand{
+    display: none;
+}
+.booking-info p{
+    font-size: 25px;
+    color: #000;
+}
+
+/*訂位系統送出按鈕*/
+.booking button{
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: rgb(93, 52, 189);
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+.booking button:hover{
+    color: #fff;
+    background-color: rgb(41, 8, 119);
+}
+/*訂位系統alert樣式*/
+.alertbox{
+    width: 400px; 
+    color: #000;
+    overflow: hidden;
+	background: var(--lightwhite);
+	box-shadow: 0 0 20px black;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    padding: 15px;
+    display: none;
+}
+.alert-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.alert-content h5{
+    color: #333;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.alert-content ul{
+    list-style: none;
+}
+.alert-content ul li{
+    font-size: 20px;
+}
+.alert-content p{
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 10px 0;
+}
+.closebtn{
+    font-size: 18px;
+	color: white;
+	padding: 10px 30px;
+	cursor: pointer;
+	background: #3498db;
+	display: inline-block;
+	border-radius: 4px;
+}
+/*頁尾*/
+.footer{
+    background-color: var(--darkblue);
+    font-size: 20px;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    line-height: 30px;
+}
+.footer-about{
+    color:var(--lightwhite);
+}
+.footer-info span a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    margin-right: 20px;
+}
+.footer-info span a:hover{
+    color: rgb(182, 156, 8);
+}
+
+.social a{
+    color: rgb(255, 255, 255);
+    margin: 0 18px;
+    background-color: rgb(104, 103, 103);
+    padding: 20px;
+    border-radius: 50%;
+}
+.social a:hover{
+    background-color: #000;
+}
+@media(max-width: 1200px){
+    .footer-wrapper{
+        flex-direction: column;
+    }
+    .footer-info{
+        margin-bottom: 40px;
+    }
+    .social{
+        width: 100%;
+    }
+}
+@media(max-width: 768px){
+    .social a{
+        margin: 0 9px;
+    }
+}

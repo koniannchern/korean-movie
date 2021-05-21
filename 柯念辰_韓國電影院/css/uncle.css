@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*電影海報*/
+.header{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,1)),url(../img/uncle_banner.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.back-to-home{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.back-to-home a{
+    display: inline-block;
+    color: #fff;
+    background-image: linear-gradient(to right, #857452 , #857452);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 100;
+}
+.back-to-home a:hover{
+    background-image: linear-gradient(to right, #523908 , #523908);
+}
+.back-to-home a i{
+    margin-right: 10px;
+}
+
+/*電影介紹*/
+.movie-intro{
+    background-color: #222831;
+    padding: 30px 55px 0 55px;
+}
+.movie-intro-box{
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    color: #fff;
+}
+.movie-poster{
+    transform: translateY(-250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.movie-poster img{
+    width: 280px;
+    box-shadow: 5px 5px 10px #000;
+    margin-bottom: 20px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+.btn a{
+    border: none;
+	padding: 12px 40px;
+	background-color: rgb(251, 255, 0);
+	color: black;
+    font-size: 22px;
+    font-weight: bold;
+	cursor: pointer;
+    position: relative;
+    text-decoration: none;
+}
+.btn a:before{
+    content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: -5px;
+	left: -5px;
+	border-top: 2px solid rgb(251, 255, 0);
+	border-left: 2px solid rgb(251, 255, 0);
+	transition: all 0.25s;
+}
+.btn a:hover:before{
+    height: 100%;
+	width: 100%;
+}
+.btn a:after{
+    content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	bottom: -5px;
+	right: -5px;
+	border-bottom: 2px solid rgb(251, 255, 0);
+	border-right: 2px solid rgb(251, 255, 0);
+	transition: all 0.25s;
+}
+.btn a:hover:after{
+    height: 100%;
+	width: 100%;
+}
+/*電影名*/
+.movie-content{
+    padding: 0 20px;
+}
+.movie-title{
+    margin-bottom: 60px;
+}
+.movie-title h1{
+    font-size: 45px;
+    letter-spacing: 7px;
+    margin-bottom: 10px;
+}
+
+.movie-title span{
+    display: flex;
+}
+.movie-title p{
+    margin-right: 30px;
+    letter-spacing: 4px;
+}
+.movie-title p i{
+    color: rgb(251, 255, 0);
+    margin-right: 10px;
+}
+
+
+/*電影劇情*/
+
+.movie-plot h2{
+    color: #857452;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.movie-plot h2:before{
+    content: '';
+    display: block;
+    width: 3px;
+    height: 18px;
+    background-color: rgb(216, 124, 19);
+    margin-right: 10px;
+}
+.movie-plot p{
+    line-height: 22px;
+}
+/*演員列&預告片*/
+
+.movie-actor-list h2{
+    color: #857452;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.movie-actor-list h2:before{
+    content: '';
+    display: block;
+    width: 3px;
+    height: 18px;
+    background-color: rgb(216, 124, 19);
+    margin-right: 10px;
+}
+.movie-actor{
+    display: flex;
+}
+.movie-actor span{
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+.movie-actor span img{
+    margin-bottom: 10px;
+}
+/*預告片*/
+.trailer{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 10000;
+	background: rgba(0,0,0,0.95);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+}
+.trailer.active{
+	visibility: visible;
+	opacity: 1;
+}
+.trailer video{
+	position: relative;
+	max-width: 100%;
+	outline: none;
+}
+.close{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	cursor:pointer;
+	filter: invert(1);
+	max-width: 50px;
+}
+
+@media(max-width: 1200px){
+    .movie-intro-box{
+        flex-direction: column;
+    }
+    .movie-content{
+        transform: translateY(-200px);
+    }
+    .movie-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie-plot{
+        margin-bottom: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie-actor-list{
+        transform: translateY(-250px);
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie-actor{
+        justify-content: space-between;
+    }
+    .movie-actor span{
+        margin: 0 35px;
+    }
+    .movie-actor span img{
+        width: 100%;
+    }
+}
+
+

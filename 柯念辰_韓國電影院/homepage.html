@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOREAN CINEMA</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/homepage.css" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.24/paper-full.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <!--首頁navbar-->
+      <div class="homepage-navbar">
+        <div class="navbar-box">
+          <h1>KOREAN CINEMA</h1>
+          <div class="navbar-menu">
+            <ul>
+              <li><a href="#swiper">電影列表</a></li>
+              <li><a href="#ticket">票價說明</a></li>
+              <li><a href="#sales">會員優惠</a></li>
+              <li><a href="#theater">影廳介紹</a></li>
+              <li><a href="#booking">電影票預購</a></li>
+            </ul>
+          </div>
+          <a href="#" class="showmenu"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+
+      
+
+      <!--首頁電影列表-->
+      <div class="swiper" id="swiper">
+        <div class="swiper-container">
+          <div class="box-office">
+            <h2>電影列表</h2>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(img/welcome.jpg)">
+              <button><i class="fas fa-star"></i>8.9/10</button>
+              <a href="welcome.html">歡迎來到東莫村<i class="fas fa-angle-double-right"></i></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/flu.jpg)">
+              <button><i class="fas fa-star"></i>7.1/10</button>
+              <a href="flu.html">流感<i class="fas fa-angle-double-right"></i></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/classic.jpg)">
+              <button><i class="fas fa-star"></i>9.7/10</button>
+              <a href="classic.html">緣起不滅<i class="fas fa-angle-double-right"></i></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/uncle.jpg)">
+              <button><i class="fas fa-star"></i>9.2/10</button>
+              <a href="uncle.html">大叔<i class="fas fa-angle-double-right"></i></a>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/witness.jpg)">
+              <button><i class="fas fa-star"></i>9.0/10</button>
+              <a href="witness.html">證人<i class="fas fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--票價說明-->
+    <div class="ticket-price" id="ticket">
+      <h3><img src="img/ticket.png" alt="票價">票價說明 / PRICE</h3>
+
+      <div class="ticket-intro">
+        <table>
+          <tr>
+            <th>放映廳</th>
+            <th>全票</th>
+            <th>優待票</th>
+            <th>愛心票</th>
+          </tr>
+
+          <tr>
+            <td>IMAX影廳</td>
+            <td>NT $200</td>
+            <td>NT $150</td>
+            <td>NT $125</td>
+          </tr>
+
+          <tr>
+            <td>Mappa影廳</td>
+            <td>NT $240</td>
+            <td>NT $190</td>
+            <td>NT $165</td>
+          </tr>
+
+          <tr>
+            <td>4DX影廳</td>
+            <td>NT $280</td>
+            <td>NT $230</td>
+            <td>NT $200</td>
+          </tr>
+
+          <tr>
+            <td>GOLD CLASS影廳</td>
+            <td>NT $300</td>
+            <td>NT $250</td>
+            <td>NT $220</td>
+          </tr>
+        </table>
+
+      </div>
+
+      <div class="discount-ticket">
+        <h3>優惠購票注意事項</h3>
+        <ul>
+          <li>購買愛心票需於購票/進場/取票時出示您的身心障礙手冊(證件)做確認，持有新版身心障礙證明(粉紅色)之民眾與陪同者一位，身心障礙證明背面之必要陪伴者優惠措施欄位須註記有進入公民營風景區、康樂場所與文教設施字樣，始提供必要陪伴者一人愛心票價的優惠</li>
+          <li>敬老票資格為年滿65歲以上之老年人，票價如同愛心票</li>
+          <li>愛心票民眾可於臨櫃註冊會員一樣可享有會員優惠</li>
+          <li>全票可透過本網站訂位系統預先訂位，如是優待票及愛心票資格民眾請於臨櫃購票</li>
+          <li>二歲以上且未滿十二歲之兒童，需購買優待票進場</li>
+          <li>兒童未滿二歲，無需購票可入場觀賞【普遍級】影片，每位購票者限免費攜帶一名未滿二歲兒童入場。(未購票之兒童恕不提供座位)</li>
+        </ul>
+      </div>
+    </div>
+    <!--優惠-->
+
+    <div class="sales" id="sales">
+        
+        <h3><img src="img/coupon.png" alt="優惠">優惠方案 / SALES</h3>
+      <div class="sales-grid">
+        <div>
+          <img src="img/point-of-sale.png" alt="點數">
+          <span>
+            <h4>點數累積</h4>
+            <p>每次購買電影票可享5%~10%點數累積</p>
+          </span>
+        </div>
+        <div>
+          <img src="img/birthday-cake.png" alt="蛋糕">
+          <span>
+            <h4>生日禮券</h4>
+            <p>生日壽星當天可獲得生日禮券100元，電影票及小販部商品皆適用</p>
+          </span>
+        </div>
+        <div>
+          <img src="img/vip.png" alt="VIP">
+          <span>
+            <h4>VIP</h4>
+            <p>累計消費金額達5000元可升級成VIP會員，日後購買電影票可享9折優惠</p>
+          </span>
+        </div>
+        <div>
+          <img src="img/popcorn.png" alt="">
+          <span>
+            <h4>電影票優惠</h4>
+            <p>單個場次購買四張電影票可至小販部兌換爆米花乙份</p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!--電影院內部環境-->
+    
+
+    <div class="theater" id="theater">
+      <div class="theater-seat-info">
+        <h5><img src="img/seat.png" alt="">影廳介紹 / THEATER</h5>
+      </div>
+      <div class="theater-seats">
+        <span>
+          <img src="img/theater-seat1.jpg" alt="">
+          <div class="theater-seats-intro">
+            <h6>GOLD CLASS頂級影廳</h6>
+            <p>專業酒吧及五星級高級餐點；可調整豪華舒適總統座椅，專人服務。</p>
+          </div>
+        </span>
+        <span>
+          <img src="img/theater-seat2.jpg" alt="">
+          <div class="theater-seats-intro">
+            <h6>4DX影廳</h6>
+            <p>動態特效感受到前後左右360度的起降搖擺，座椅噴射氣流以及椅背、椅墊的超低頻震動與拍打，讓觀眾與片中打鬥槍戰情節融於一體。</p>
+          </div>
+        </span>
+        <span>
+          <img src="img/theater-seat3.jpg" alt="">
+          <div class="theater-seats-intro">
+            <h6>IMAX影廳</h6>
+            <p>最高規格的的電影放映技術，能夠放映比一般影廳更高解析度的電影放映系統，搭配 IMAX高傳真的數位音響技術。</p>
+          </div>
+        </span>
+        <span>
+          <img src="img/theater-seat4.jpg" alt="">
+          <div class="theater-seats-intro">
+            <h6>Mappa影廳</h6>
+            <p>具備特殊功能人性化座椅，結合旅行地圖主題推出不同主題美食、主題書籍外更有著主題電影、人文講座；帶給觀眾走入一場真正的電影小旅行</p>
+          </div>
+        </span>
+      </div>
+    </div>
+
+      <!--訂位-->
+      <div class="booking" id="booking">
+        <div class="system-title">
+            <h3><img src="img/booking.png" alt="">線上訂位 / BOOKING</h3>
+        </div>
+
+        <div class="booking-box">
+            
+
+            <!--選座位-->
+            <div class="booking-seats">
+
+              <ul class="showcase">
+                  <li>
+                    <div class="seat"></div>
+                    <small>可選座位</small>
+                  </li>
+                  <li>
+                    <div class="seat selected"></div>
+                    <small>選擇的座位</small>
+                  </li>
+                  <li>
+                    <div class="seat occupied"></div>
+                    <small>不可選座位</small>
+                  </li>
+                </ul>
+
+              <div class="seats-container">
+                  <div class="screen"></div>
+            
+                  <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                  </div>
+                  <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                  </div>
+                  <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                  </div>
+                  <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                  </div>
+                  <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                  </div>
+                  <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="booking-info">
+              
+              <div class="booking-info-box">
+                  <label for="moviename">請選擇電影</label>
+                  <select name="moviename" id="moviename">
+                      <option value="緣起不滅">緣起不滅</option>
+                      <option value="流感">流感</option>
+                      <option value="大叔">大叔</option>
+                      <option value="歡迎來到東莫村">歡迎來到東莫村</option>
+                      <option value="證人">證人</option>
+                  </select>
+              </div>
+  
+              <div class="booking-info-box">
+                  <label for="booking-date">請選擇日期</label>
+                  <select name="booking-date" id="booking-date">
+                      <option>1/29</option>
+                      <option>1/30</option>
+                  </select>
+              </div>
+  
+              <div class="booking-info-box">
+                  <label for="booking-time">請選擇場次</label>
+                  <select name="booking-time" id="booking-time">
+                      <option value="9:00">9:00</option>
+                      <option value="10:30">10:30</option>
+                      <option value="13:40">13:40</option>
+                      <option value="16:20">16:20</option>
+                      <option value="19:00">19:00</option>
+                      <option value="21:10">21:10</option>
+                  </select>
+              </div>
+  
+              <div class="booking-phone">
+                <label for="phone">請輸入手機號碼</label>
+                <input type="tel" id="phone">
+              </div>
+          </div>
+        </div>
+
+        <!--訂位資訊-->
+        
+        <button id="btn">訂位</button>
+
+        <!--訂位成功與否alert-->
+        <div class="alertbox">
+
+          <div class="alert-content">
+              <h5 id="alert-content-title">Good job!</h5>
+              <ul>
+                <li id="alert-movie-name"></li>
+                <li id="alert-movie-date"></li>
+                <li id="alert-movie-time"></li>
+                <li id="alert-ticket-count"></li>
+                <li id="ticket-price"></li>
+              </ul>
+              <p id="alert-warning"></p>
+              <a class="closebtn" onclick="closeAlert()">Close</a>
+          </div>
+
+        </div>
+    </div>
+
+    <!--頁尾-->
+    <div class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-info">
+          <span>
+            <a href="#">關於</a>
+            <a href="#">人才招募</a>
+            <a href="#">電影票預購</a>
+          </span>
+          <div class="footer-about">
+            <p>地址: 台中市銀河路151號</p>
+            <p>電話: 02-7457816</p>
+            <p>信箱: bluedragon@gmail.com</p>
+            <p>Copyright ⓒ Blue Dragon Theater. All Rights Reserved.</p>
+          </div>
+        </div>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#"><i class="fab fa-google-play fa-lg"></i></a>
+            <a href="#"><i class="fab fa-apple fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/homepage.js"></script>
+  </body>
+</html>
